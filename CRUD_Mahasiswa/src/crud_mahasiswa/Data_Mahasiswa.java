@@ -65,7 +65,6 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
                     res.getString(8)
                 });
             }
-            
             jTable1.setModel(model);
             
         } catch (Exception e) {
@@ -103,13 +102,15 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
                     res.getString(5),
                     res.getString(6),
                     res.getString(7),
-                    res.getString(8)
+                    res.getString(8),
                 });
             }
             jTable1.setModel(model);
             if (model.getRowCount() == 0) {
                 JOptionPane.showMessageDialog(null, "Data tidak ditemukan!");
             }
+            
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error pencarian: " + e.getMessage());
         }
@@ -156,7 +157,6 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -171,6 +171,7 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -187,18 +188,26 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
 
         jLabel6.setText("No Handhphone");
 
+        jTextField1.setEditable(false);
+
+        jTextField2.setEditable(false);
+        jTextField2.setEnabled(false);
         jTextField2.addActionListener(this::jTextField2ActionPerformed);
 
-        jButton1.setText("Tambah");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        jTextField3.setEditable(false);
+
+        jTextField4.setEditable(false);
 
         jButton2.setText("Edit");
+        jButton2.setEnabled(false);
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton3.setText("Hapus");
+        jButton3.setEnabled(false);
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton4.setText("Clear");
+        jButton4.setEnabled(false);
         jButton4.addActionListener(this::jButton4ActionPerformed);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik", "Hukum", "Kedokteran", "Manajemen ", "Akuntansi", "Pendidikan" }));
@@ -223,12 +232,21 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
 
         jLabel7.setText("Fakultas");
 
+        jTextField5.setEditable(false);
+
         jLabel8.setText("Universitas");
+
+        jTextField6.setEditable(false);
 
         jLabel9.setText("Bidang Peminatan");
 
+        jTextField7.setEditable(false);
+
         jButton5.setText("Cari");
         jButton5.addActionListener(this::jButton5ActionPerformed);
+
+        jButton6.setText("Baru");
+        jButton6.addActionListener(this::jButton6ActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -264,10 +282,10 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
                                     .addComponent(jTextField7))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton6)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -284,31 +302,37 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jButton6))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jButton2)
+                        .addGap(59, 59, 59)
+                        .addComponent(jButton3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -316,7 +340,7 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5))
@@ -330,34 +354,8 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        try {
-            String sql = "INSERT INTO table_mhs (nama, nim, jurusan, alamat, no_telpon, fakultas, universitas, bidang_peminatan) VALUES ('" +   jTextField1.getText() + "', '" +
-                                                                                                                                                jTextField2.getText() + "', '" +
-                                                                                                                                                jComboBox1.getSelectedItem() + "', '" +
-                                                                                                                                                jTextField3.getText() + "', '" +
-                                                                                                                                                jTextField4.getText() + "', '" +
-                                                                                                                                                jTextField5.getText() + "', '" +
-                                                                                                                                                jTextField6.getText() + "', '" +
-                                                                                                                                                jTextField7.getText() + "')" ;
-            
-            java.sql.Connection conn = (Connection) Data_Mahasiswa.configDB();
-            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
-            pst.execute();
-            
-            JOptionPane.showMessageDialog(null, "Penyimpanan data berhasil");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        
-        load_table();
-        kosong();
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
@@ -387,6 +385,11 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
         
         String bidang_peminatan = jTable1.getValueAt(baris, 8).toString();
         jTextField7.setText(bidang_peminatan);
+        
+        
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        jButton6.setText("Baru");
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -438,6 +441,7 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        jButton6.setText("Baru");
         kosong();
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -452,6 +456,83 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        
+        if(jButton6.getText() == "Baru") {
+            jButton6.setText("Tambah");
+            
+            kosong();
+        
+            jTextField1.setEditable(true);
+            jTextField2.setEditable(true);
+            jTextField3.setEditable(true);
+            jTextField4.setEditable(true);
+            jTextField5.setEditable(true);
+            jTextField6.setEditable(true);
+            jTextField7.setEditable(true);
+
+            jButton2.setEnabled(false);
+            jButton3.setEnabled(false);
+            jButton4.setEnabled(true);
+            
+            try {
+                String sql = "SELECT nim FROM table_mhs ORDER BY nim DESC LIMIT 1";
+
+                java.sql.Connection conn = (Connection) Data_Mahasiswa.configDB();
+                java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+                java.sql.ResultSet rs = pst.executeQuery();
+
+                if(rs.next()) {
+                    String lastNim = rs.getString("nim");
+
+                    String frontNim = lastNim.substring(0, 7);
+                    String endNim = lastNim.substring(7);
+
+                    int nimPlus = Integer.parseInt(endNim) + 1;
+
+                    String nextNim = frontNim + String.format("%03d", nimPlus);
+
+                    jTextField2.setText(nextNim);
+
+                } else {
+                    jTextField2.setText("24-411-001");
+                }
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Gagal memuat data baru " + e.getMessage());
+            }
+        } else {
+            jButton6.setText("Baru");
+            
+            try {
+                String sql = "INSERT INTO table_mhs (nama, nim, jurusan, alamat, no_telpon, fakultas, universitas, bidang_peminatan) VALUES ('" +   jTextField1.getText() + "', '" +
+                                                                                                                                                    jTextField2.getText() + "', '" +
+                                                                                                                                                    jComboBox1.getSelectedItem() + "', '" +
+                                                                                                                                                    jTextField3.getText() + "', '" +
+                                                                                                                                                    jTextField4.getText() + "', '" +
+                                                                                                                                                    jTextField5.getText() + "', '" +
+                                                                                                                                                    jTextField6.getText() + "', '" +
+                                                                                                                                                    jTextField7.getText() + "')" ;
+
+                java.sql.Connection conn = (Connection) Data_Mahasiswa.configDB();
+                java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+                pst.execute();
+
+                JOptionPane.showMessageDialog(null, "Penyimpanan data berhasil");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+
+            load_table();
+            kosong();
+
+            jButton6.setEnabled(true);
+
+        }
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -479,11 +560,11 @@ public class Data_Mahasiswa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
